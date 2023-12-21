@@ -1,1 +1,8 @@
-<p>history works!</p>
+@if (enoughData()) {
+ OK
+} @else {
+  <app-oops
+    [isNotFoundPage]='false'
+    stringTemplate='Pas assez de valeur !'
+  />
+}
