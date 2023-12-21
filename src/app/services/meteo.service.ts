@@ -46,7 +46,6 @@ export class MeteoService {
     this.httpClient.get<Meteo[]>(`${this.baseUrl}/history/${duration}`).pipe(
       take(1),
       tap((response: Meteo[]) => {
-        console.log('response: ', response);
         this.enoughData.set(response.length >= duration);
         this.meteoHistory.set(response);
       }),
