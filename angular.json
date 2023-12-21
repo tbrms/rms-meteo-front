@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "rms-meteo-front": {
+      "i18n": {
+        "sourceLocale": "fr"
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",

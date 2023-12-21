@@ -1,2 +1,8 @@
-<app-meteo-now />
-<router-outlet />
+<div class="navbar">
+  <a [routerLink]="['home']"><fa-icon [icon]="faHome"></fa-icon></a>
+  <a [routerLink]="['/history', 24]"><fa-icon [icon]="faClock"></fa-icon>24h</a>
+  <a [routerLink]="['/history', 72]"><fa-icon [icon]="faClock"></fa-icon>72h</a>
+</div>
+<div class="container">
+  <router-outlet />
+</div>

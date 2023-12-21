@@ -1,0 +1,40 @@
+.now-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1rem;
+
+  div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .temperature,
+  .pression,
+  .humidity {
+    color: rgb(15, 2, 77);
+  }
+}
+
+.button {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(15, 2, 77);
+  font-size: 1rem;
+
+  fa-icon {
+    margin-right: 1rem;
+  }
+}

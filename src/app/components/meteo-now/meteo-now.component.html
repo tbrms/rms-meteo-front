@@ -1,3 +1,22 @@
-<div>
-  temperature: {{ meteoNow()}}
+<div class="now-container">
+  <div>
+    {{ meteoNow()!.createdAt | date:'EEEE d MMMM y' | titlecase }}
+  </div>
+  <div>
+    {{ meteoNow()!.createdAt | date:'HH:mm' }}
+  </div>
+  <div class="temperature">
+    <fa-icon [icon]="faTemperatureHalf"></fa-icon> {{ meteoNow()!.temperature}}°C
+  </div>
+  <div class="pression">
+    <fa-icon [icon]="faCloudSunRain"></fa-icon> {{ meteoNow()!.pression}}hPa
+  </div>
+  <div class="humidity">
+    <fa-icon [icon]="faDroplet"></fa-icon> {{ meteoNow()!.humidite}}%
+  </div>
 </div>
+
+<button class="button" (click)="refresh()">
+  <fa-icon [icon]="faRotateRight"></fa-icon>
+  Mettre à jour
+</button>
