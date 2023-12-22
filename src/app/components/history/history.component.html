@@ -1,25 +1,13 @@
 @if (enoughData()) {
-  <canvas baseChart width="350" height="350"
-    [type]="'line'"
-    [data]="temperatureChartData"
-    [options]="lineChartOptions"
-    [legend]="lineChartLegend">
-  </canvas>
-  <canvas baseChart width="350" height="350"
-    [type]="'line'"
-    [data]="pressionChartData"
-    [options]="lineChartOptions"
-    [legend]="lineChartLegend">
-  </canvas>
-  <canvas baseChart width="350" height="350"
-    [type]="'line'"
-    [data]="humidityChartData"
-    [options]="lineChartOptions"
-    [legend]="lineChartLegend">
-  </canvas>
+<canvas baseChart width="350" height="350" [type]="'line'" [data]="temperatureChartData" [options]="lineChartOptions"
+  [legend]="lineChartLegend">
+</canvas>
+<canvas baseChart width="350" height="350" [type]="'line'" [data]="pressionChartData" [options]="lineChartOptions"
+  [legend]="lineChartLegend">
+</canvas>
+<canvas baseChart width="350" height="350" [type]="'line'" [data]="humidityChartData" [options]="lineChartOptions"
+  [legend]="lineChartLegend">
+</canvas>
 } @else {
-  <app-oops
-    [isNotFoundPage]='false'
-    stringTemplate='Pas assez de valeur !'
-  />
+<app-oops [isNotFoundPage]='false' stringTemplate='Pas assez de valeur !' />
 }
